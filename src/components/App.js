@@ -32,7 +32,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                <SearchBar onSearchTermChange={searchTerm => this.videoSearch(searchTerm)} />
+                <SearchBar onSearchTermChange={searchTerm => this.videoSearch(searchTerm)}  />
                 <VideoDetail video={this.state.selectedVideo} />
                 <VideoList 
                     onVideoSelect={userSelected => this.setState({selectedVideo: userSelected})}
