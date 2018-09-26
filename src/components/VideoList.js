@@ -1,5 +1,6 @@
 import React from "react";
 import VideoListItem from "./VideoListItem";
+import { connect } from "react-redux";
 
 const VideoList = (props) => {
     const videoItems = props.videos.map((video) => {
@@ -18,4 +19,9 @@ const VideoList = (props) => {
     );
 };
 
-export default VideoList;
+function mapStateToProps(state){
+    return{
+        videos:state.videos
+    };
+}
+export default connect(mapStateToProps)(VideoList);
